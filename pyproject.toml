@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "product-review-sentiment-analysis"
+version = "1.0.0"
+description = "A reproducible baseline NLP pipeline for binary review sentiment classification"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.1,<3.0",
+  "scikit-learn>=1.4,<2.0",
+  "joblib>=1.3,<2.0",
+  "numpy>=1.26,<3.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
